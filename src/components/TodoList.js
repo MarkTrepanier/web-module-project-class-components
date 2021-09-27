@@ -5,9 +5,9 @@ import Todo from './Todo'
 const Todolist = props=>{
 
     return(
-        <div classNametodList>
+        <div className='todoList'>
             {props.todos.map(todo => (
-                <Todo task ={todo.task} id = {todo.id}/>
+                <Todo task ={todo.task} key = {todo.id}/>
             ))}
         </div>
     )
