@@ -5,7 +5,7 @@ import Todo from './Todo'
 const Todolist = props=>{
 
     return(
-        <ul className='todoList'>
+        <ul list-style-type='none' className='todoList'>
             {props.todos.map(todo => (
                 <Todo task={todo.task} key={todo.id} id={todo.id} completed={todo.completed} handleToggle={props.handleToggle}/>
             ))}

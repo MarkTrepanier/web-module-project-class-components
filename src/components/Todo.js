@@ -7,7 +7,7 @@ const Todo = props =>{
         props.handleToggle(props.id)
     }
     return(
-        props.completed ? <li style={{textDecorationLine: 'line-through'}} id={props.id} onClick={handleClick}>{props.task}</li> : <li id={props.id} onClick={handleClick}>{props.task}</li>
+        props.completed ? <li style={{textDecorationLine: 'line-through', listStyleType:'none'}}  id={props.id} onClick={handleClick}>{props.task}</li> : <li  style={{ listStyleType:'none'}}id={props.id} onClick={handleClick}>{props.task}</li>
     )
 }
 
