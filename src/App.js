@@ -72,6 +72,15 @@ class App extends React.Component {
     });
   }
 
+  handleClearing = ()=>{
+    this.setState({
+      ...this.state,
+      todos: this.state.todos.filter(todo =>{
+        return(!todo.completed)
+      })
+    });
+  }
+
   render() {
     return (
       <div className='App'>
@@ -79,7 +88,7 @@ class App extends React.Component {
 
         <Todolist handleToggle={this.handleToggle} todos={this.state.todos}/>
 
-        <TodoForm handleAddTodo={this.handleAddTodo}/>
+        <TodoForm handleAddTodo={this.handleAddTodo} handleClearing={this.handleClearing}/>
       </div>
     );
   }
