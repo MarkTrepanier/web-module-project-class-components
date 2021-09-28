@@ -3,10 +3,11 @@ import React from "react";
 const Todo = props =>{
     
     const handleClick=()=>{
+        console.log('clicking '+ props.task + ' id:' + props.id +'. Completed:' + props.completed)
         props.handleToggle(props.id)
     }
     return(
-    <li id={props.id} onClick={handleClick}>{props.task}</li>
+        props.completed ? <li style={{textDecorationLine: 'line-through'}} id={props.id} onClick={handleClick}>{props.task}</li> : <li id={props.id} onClick={handleClick}>{props.task}</li>
     )
 }
 
