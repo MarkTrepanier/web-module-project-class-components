@@ -1,7 +1,13 @@
 import React from "react";
 
 const Todo = props =>{
-    return(<h3 key={props.id}>{props.task}</h3>)
+    
+    const handleClick=()=>{
+        props.handleToggle(props.item.id)
+    }
+    return(
+    <li key={props.id} onClick={handleClick}>{props.task}</li>
+    )
 }
 
 export default Todo;
