@@ -18,11 +18,8 @@ class TodoForm extends React.Component{
     handleSubmit = (e) =>{
         e.preventDefault();
         this.props.handleAddTodo(this.state.input);
-        formObject.reset();
     }
 
-
-    
     handleClick=()=>{
         this.props.handleClearing();
     }
