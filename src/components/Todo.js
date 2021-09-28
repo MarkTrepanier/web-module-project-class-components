@@ -4,10 +4,12 @@ const Todo = props =>{
     
     const handleClick=()=>{
         console.log(props.id)
-        //props.handleToggle(props.key)
+        console.log(props.completed)
+        props.handleToggle(props.id)
+        console.log(props.completed)
     }
     return(
-    <li key={props.id} id={props.id} onClick={handleClick}>{props.task}</li>
+    <li id={props.id} onClick={handleClick}>{props.task}</li>
     )
 }
 
